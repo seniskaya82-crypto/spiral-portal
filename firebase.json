@@ -1,17 +1,10 @@
 {
   "hosting": {
-    "target": "birlik",
     "public": ".",
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**",
-      "**/.git/**",
-      "**/*.zip",
-      "**/*.psd",
-      "**/*.ai",
-      "**/*.xd",
-      "**/yedek/**"
+      "**/node_modules/**"
     ],
     "rewrites": [
       {
@@ -21,4 +14,3 @@
     ]
   }
 }
-
