@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>8. Katman – Yıldız Kapısı: Moldavite</title>
+  <style>
+    :root{ --bg:#000; --ink:#fff; --edge:#ffffff30; --accent:#9ef7b1; }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family:"Segoe UI",system-ui,Inter,Roboto,Arial,sans-serif; text-align:center;
+      padding:22px 16px 36px;
+    }
+    h1{margin:8px 0 6px; font-size:clamp(22px,3.2vw,30px); color:#d7ffe9}
+    .wrap{max-width:900px; margin:auto}
+    .hero{
+      margin:14px auto 8px; border-radius:10px; overflow:hidden;
+      display:inline-block; border:1px solid var(--edge);
+    }
+    .hero img{display:block; width:clamp(260px,86vw,860px); height:auto}
+    .niyet{
+      margin:18px auto 10px; color:#e0e0e0; line-height:1.6;
+      font-size:clamp(14px,2.3vw,18px);
+    }
+    .audio-title{margin-top:18px; font-weight:700; color:var(--accent)}
+    audio{width:clamp(260px,86vw,520px); margin-top:8px}
+    .btns{margin-top:18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+    .btn{
+      color:#fff; text-decoration:none; padding:10px 16px; border-radius:8px;
+      border:1px solid var(--edge); background:#ffffff10; transition:.2s; font-weight:600
+    }
+    .btn:hover{background:#ffffff25}
+    footer{margin-top:28px; color:#bbb; font-style:italic; font-size:14px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>8. Katman – Yıldız Kapısı: Moldavite</h1>
+
+    <!-- Görsel -->
+    <div class="hero">
+      <img src="assets/katman-8/8_katman_yildiz_kapisi_moldavite_gorsel.jpg" alt="Yıldız Kapısı – Moldavite görseli">
+    </div>
+
+    <!-- Niyet / Mühür -->
+    <p class="niyet">
+      “Yıldız Kapısı, sadece gökyüzüne değil — kendi sonsuzluğuna açılır.”
+    </p>
+
+    <!-- Ses -->
+    <div class="audio-title">🔊 Sesli Fısıltı</div>
+    <audio controls preload="metadata">
+      <source src="assets/katman-8/8_katman_yildiz_kapisi_moldavite_fisilti.mp3" type="audio/mpeg">
+      Tarayıcınız ses öğesini desteklemiyor.
+    </audio>
+
+    <!-- PDF & ZIP -->
+    <div class="btns">
+      <a class="btn" href="assets/katman-8/8_katman_yildiz_kapisi_moldavite.pdf" target="_blank" rel="noopener">📄 PDF</a>
+      <a class="btn" href="assets/katman-8/8_katman_yildiz_kapisi_moldavite.zip" download>📦 ZIP</a>
+    </div>
+
+    <footer>“Işık köprüsü kuruldu: yukarı ve aşağı tek nefeste.”</footer>
+  </div>
+</body>
+</html>

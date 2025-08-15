@@ -1,0 +1,8 @@
+gecit-1/  -> 1_gecit_toprak_gorsel.jpg, 1_gecit_toprak_fisilti.mp3, 1_gecit_toprak.pdf, 1_gecit_toprak.zip
+gecit-2/  -> 2_gecit_su_gorsel.jpg, 2_gecit_su_fisilti.mp3, 2_gecit_su.pdf, 2_gecit_su.zip
+gecit-3/  -> 3_gecit_ates_donusum_gorsel.jpg, 3_gecit_ates_donusum_fisilti.mp3, 3_gecit_ates_donusum.pdf, 3_gecit_ates_donusum.zip
+gecit-4/  -> 4_gecit_hava_celestite_gorsel.jpg, 4_gecit_hava_celestite_fisilti.mp3, 4_gecit_hava_celestite.pdf, 4_gecit_hava_celestite.zip
+gecit-5/  -> 5_gecit_ruh_merkez_gorsel.jpg, 5_gecit_ruh_merkez_fisilti.mp3, 5_gecit_ruh_merkez.pdf, 5_gecit_ruh_merkez.zip
+katman-6/ -> 6_katman_kalp_isigi_gorsel.jpg, 6_katman_kalp_isigi_fisilti.mp3, 6_katman_kalp_isigi.pdf, 6_katman_kalp_isigi.zip
+katman-7/ -> 7_katman_evren_isik_gorsel.jpg, 7_katman_evren_isik_fisilti.mp3, 7_katman_evren_isik.pdf, 7_katman_evren_isik.zip
+katman-8/ -> 8_katman_yildiz_kapisi_moldavite_gorsel.jpg, 8_katman_yildiz_kapisi_moldavite_fisilti.mp3, 8_katman_yildiz_kapisi_moldavite.pdf, 8_katman_yildiz_kapisi_moldavite.zip

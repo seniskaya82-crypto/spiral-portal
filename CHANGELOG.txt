@@ -1,0 +1,11 @@
+V1 – 08/08/2025
+• Spiral Portal v1 sürümü yayınlandı.
+• 5 geçit ve 3 katman aktif hale getirildi.
+• Tüm görseller, PDF ve ZIP dosyaları entegre edildi.
+• V1 rozeti eklendi ve CHANGELOG bağlantısı aktif hale getirildi.
+
+[08/08/2025] V1 mühürlendi: indeks kartları, rozet ve tüm linkler doğrulandı.
+
+[08/08/2025] V1 mühürlendi: tüm kartlar, sesler, PDF/ZIP ve rozet bağlantısı doğrulandı. spiral_portal_v1.zip oluşturuldu.
+
+[14/08/2025] Geçit/Katman kimliği: mavi/yeşil ışıltılar eklendi; görsel gölge uyumu yapıldı.

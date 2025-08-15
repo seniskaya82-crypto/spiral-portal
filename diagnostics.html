@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Spiral Portal — Hızlı Diagnostik</title>
+<style>
+  :root{ --bg:#0b0f14; --panel:#121823; --text:#e9eef7; --muted:#9fb2c7; --ok:#16c872; --bad:#ff5a63; }
+  body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 system-ui,Segoe UI,Roboto,Inter,sans-serif}
+  .wrap{max-width:960px;margin:32px auto;padding:0 16px}
+  h1{margin:0 0 8px} .sub{color:var(--muted);margin:0 0 20px}
+  table{width:100%;border-collapse:collapse;background:#0f1520;border:1px solid #2a374a;border-radius:8px;overflow:hidden}
+  th,td{padding:10px 12px;border-bottom:1px solid #233044}
+  th{background:#121b2a;text-align:left;color:#cde1ff}
+  tr:last-child td{border-bottom:none}
+  .path{font-family:ui-monospace,Menlo,Consolas,monospace;color:#c8d6ea}
+  .ok{color:#fff;background:linear-gradient(#18b861,#0f8b47);display:inline-block;padding:2px 8px;border-radius:999px}
+  .bad{color:#fff;background:linear-gradient(#ff6a70,#d43f46);display:inline-block;padding:2px 8px;border-radius:999px}
+  .legend{margin:12px 0 20px;color:var(--muted)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  @media (max-width:700px){.grid{grid-template-columns:1fr}}
+  .muted{color:var(--muted)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Spiral Portal — Hızlı Diagnostik</h1>
+    <p class="sub">Bu sayfa, **mevcut klasör yapına göre** görselleri ve HTML sayfalarını test eder.</p>
+
+    <div class="grid">
+      <!-- Görseller -->
+      <section>
+        <h3>Görseller</h3>
+        <table id="imgTable">
+          <thead><tr><th>Yol</th><th>Durum</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <!-- Sayfa Linkleri -->
+      <section>
+        <h3>Sayfa Linkleri</h3>
+        <table id="pageTable">
+          <thead><tr><th>Dosya</th><th>Durum</th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <p class="legend muted">Not: Sayfa kontrolü için gizli bir <code>iframe</code> kullanılır; tamamen yereldir.</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Gizli yükleyiciler -->
+  <div style="position:fixed;inset:-9999px;visibility:hidden;opacity:0">
+    <iframe id="probe" src="about:blank"></iframe>
+  </div>
+
+<script>
+  // ---- Mevcut ve sabitlediğimiz klasör/isim yapısı ----
+  const imagePaths = [
+    'assets/gecit-1/1_gecit_toprak_gorsel.jpg',
+    'assets/gecit-2/2_gecit_su_gorsel.jpg',
+    'assets/gecit-3/3_gecit_ates_donusum_gorsel.jpg',
+    'assets/gecit-4/4_gecit_hava_celestite_gorsel.jpg',
+    'assets/gecit-5/5_gecit_ruh_merkez_gorsel.jpg',
+    'assets/katman-6/6_katman_kalp_isigi_gorsel.jpg',
+    'assets/katman-7/7_katman_evren_isik_gorsel.jpg',
+    'assets/katman-8/8_katman_yildiz_kapisi_moldavite_gorsel.jpg',
+  ];
+
+  const pagePaths = [
+    'index.html',
+    'gecit-1.html',
+    'gecit-2.html',
+    'gecit-3.html',
+    'gecit-4.html',
+    'gecit-5.html',
+    'katman-6.html',
+    'katman-7.html',
+    'katman-8.html',
+  ];
+
+  // ---- Yardımcılar ----
+  const imgTBody = document.querySelector('#imgTable tbody');
+  const pageTBody = document.querySelector('#pageTable tbody');
+
+  function addRow(tbody, path) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td class="path">${path}</td><td class="status"><span class="bad">Bekleniyor…</span></td>`;
+    tbody.appendChild(tr);
+    return tr.querySelector('.status');
+  }
+
+  function testImage(path, cell){
+    return new Promise(resolve=>{
+      const img = new Image();
+      img.onload  = ()=>{ cell.innerHTML = '<span class="ok">Ulaştı</span>'; resolve(true); };
+      img.onerror = ()=>{ cell.innerHTML = '<span class="bad">Bulunamadı</span>'; resolve(false); };
+      img.src = path + '?_t=' + Date.now(); // cache kır
+    });
+  }
+
+  function testPage(path, cell){
+    return new Promise(resolve=>{
+      const iframe = document.getElementById('probe');
+      let done = false;
+      const finish = ok => { if(done) return; done = true; cell.innerHTML = ok ? '<span class="ok">Ulaştı</span>' : '<span class="bad">Bulunamadı</span>'; resolve(ok); };
+      // onload: dosya bulunduysa çalışır
+      iframe.onload  = ()=>finish(true);
+      // 1200ms içinde yüklenmezse bulunamadı varsay
+      const t = setTimeout(()=>finish(false), 1200);
+      // Kaynak değişince onload tetiklenir; hata olursa timeout devreye girer (file:// kısıtları için güvenli)
+      iframe.src = path + (path.includes('?') ? '&' : '?') + '_t=' + Date.now();
+    });
+  }
+
+  // ---- Tabloları doldur & test et ----
+  (async function run(){
+    for(const p of imagePaths){
+      const c = addRow(imgTBody, p);
+      await testImage(p, c);
+    }
+    for(const p of pagePaths){
+      const c = addRow(pageTBody, p);
+      await testPage(p, c);
+    }
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "birlik-kapisi-portal"
+  },
+  "targets": {
+    "birlik-kapisi-portal": {
+      "hosting": {
+        "birlik": [
+          "birlik-kapisi-portal"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

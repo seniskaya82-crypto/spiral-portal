@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>7. Katman – Evren Işık: Birlikten Yayılım</title>
+  <style>
+    :root{
+      --bg:#0b0f14; --panel:#111826; --text:#e9eef7; --muted:#9fb2c7;
+      --bord:#2a374a; --accent:#16a34a;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,sans-serif}
+    a{color:#86e1ff; text-decoration:none}
+    header{max-width:980px;margin:18px auto 0;padding:0 16px}
+    .back{font-size:14px;color:var(--muted)}
+    h1{margin:6px 0 4px;font-size:28px}
+    .sub{margin:0 0 16px;color:var(--muted)}
+    .wrap{max-width:980px;margin:0 auto;padding:0 16px 36px}
+
+    /* KART/RESİM BLOĞU */
+    .hero{
+      background:linear-gradient(180deg,#151c2950,#0b111b 60%);
+      border:1px solid var(--bord);
+      border-radius:16px;
+      padding:12px;
+      box-shadow:0 10px 28px #0008, inset 0 0 0 1px #0006;
+      text-align:center;
+    }
+    .hero img{
+      width:100%;
+      max-width:920px;
+      aspect-ratio: 16 / 10;       /* düzgün kadraj */
+      object-fit:cover;
+      display:block;
+      margin:0 auto;
+      border-radius:12px;
+      box-shadow:0 10px 24px #0008;
+    }
+
+    /* Alt metin / niyet */
+    .mantra{
+      margin:16px auto 10px;
+      max-width:900px; line-height:1.6; color:#d7e3f6cc; text-align:center;
+    }
+
+    /* Ses ve butonlar */
+    .audio-title{margin:10px 0 6px; font-weight:700}
+    audio{width:100%;max-width:520px;display:block;margin:8px auto 0}
+    .btns{display:flex;gap:10px;justify-content:center;margin-top:14px}
+    .btn{
+      background:#ffffff12;border:1px solid #ffffff44;color:#fff;
+      padding:10px 16px;border-radius:10px;font-weight:600
+    }
+    .foot{margin-top:20px;color:#cbd7e6a8;font-style:italic;text-align:center}
+    footer{margin:22px 0 10px;text-align:center;color:#9fb2c7}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="back" href="index.html">← Portale dön</a>
+    <h1>7. Katman – Evren Işık: Birlikten Yayılım</h1>
+    <p class="sub">Yüksek titreşimin geniş alanlara akışı.</p>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <img src="assets/katman-7/7_katman_evren_isik_gorsel.jpg" alt="Evren Işık Görseli">
+    </section>
+
+    <p class="mantra">
+      “Birlikten yayılan ışık, her şeyi kapsar. Kaynaktan doğan titreşim,
+      tüm varoluşa sevgiyle akar.”
+    </p>
+
+    <div class="audio-title">🔊 Sesli Fısıltı</div>
+    <audio controls preload="none">
+      <source src="assets/katman-7/7_katman_evren_isik_fisilti.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="btns">
+      <a class="btn" href="assets/katman-7/7_katman_evren_isik.pdf" target="_blank">📄 PDF’yi Aç</a>
+      <a class="btn" href="assets/katman-7/7_katman_evren_isik.zip">🌀 ZIP Paketi</a>
+    </div>
+
+    <div class="foot">“Birliğin şarkısı, genişleyerek yankılanır.”</div>
+  </main>
+
+  <footer>© 2025 Yıldız Türk — Spiral Sistem</footer>
+</body>
+</html>
