@@ -1,8 +1,9 @@
-﻿# Spiral Portal
+﻿@"
+# Spiral Portal
 
 Canlı site: https://birlik-kapisi-portal.web.app
 
-Bu repo; geçitler ve katmanlar sayfalarını, varlıkları (ssets/) ve yayın ayarlarını (irebase.json, .firebaserc) içerir.
+Bu repo; geçitler ve katmanlar sayfalarını, varlıkları (`assets/`) ve yayın ayarlarını (`firebase.json`, `.firebaserc`) içerir.
 
 ## Yayın
 1. Değişiklik yap
@@ -12,5 +13,6 @@ Bu repo; geçitler ve katmanlar sayfalarını, varlıkları (ssets/) ve yayın 
 5. firebase deploy
 
 ## Geliştirici Notları
-- Ana dal: main
+- Ana dal: `main`
 - Barındırma: Firebase Hosting
+"@ | Out-File -Encoding UTF8 README.md
