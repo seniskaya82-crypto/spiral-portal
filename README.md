@@ -16,3 +16,5 @@ Bu repo; geçitler ve katmanlar sayfalarını, varlıkları (`assets/`) ve yayı
 - Ana dal: `main`
 - Barındırma: Firebase Hosting
 "@ | Out-File -Encoding UTF8 README.md
+
+Test satırı
