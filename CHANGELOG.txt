@@ -9,3 +9,5 @@ V1 – 08/08/2025
 [08/08/2025] V1 mühürlendi: tüm kartlar, sesler, PDF/ZIP ve rozet bağlantısı doğrulandı. spiral_portal_v1.zip oluşturuldu.
 
 [14/08/2025] Geçit/Katman kimliği: mavi/yeşil ışıltılar eklendi; görsel gölge uyumu yapıldı.
+
+"V1-tüm geçit/katmanlar tamam"
