@@ -1,154 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Spiral Portal — Geçitler ve Katmanlar</title>
-<style>
-  :root{
-    --bg:#0b0f14; --panel:#0f1520; --card:#121a28;
-    --text:#e9eef7; --muted:#a9b7c8;
-    --btn:#1a56ff; --btn-glow:#4aa7ff;
-    --kbtn:#1ea74a; --kbtn-glow:#60d98b;
-    --line:#263246; --radius:14px;
-  }
-  *{box-sizing:border-box}
-  body{margin:0; background:radial-gradient(1200px 600px at 50% -220px,#12213466,transparent) var(--bg); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;}
-  header{max-width:980px;margin:28px auto 8px;padding:0 16px;position:relative}
-  h1{margin:0 0 6px;letter-spacing:.2px}
-  .sub{margin:0;color:var(--muted)}
-  /* V1 Rozeti */
-  .v1{position:absolute;right:16px;top:0;display:inline-flex;align-items:center;gap:8px;
-      padding:6px 10px;border-radius:999px;background:#0f1b28;border:1px solid #24445e;
-      text-decoration:none;color:#bfe6ff;font-weight:700;font-size:12px;box-shadow:0 0 0 2px #0a121b inset;}
-  .led{width:9px;height:9px;border-radius:50%;background:#10d07a;box-shadow:0 0 10px #10d07a;}
-  .v1 small{opacity:.8;font-weight:600}
-  main{max-width:980px;margin:8px auto 40px;padding:0 16px}
-  .section-title{margin:18px 0 6px;color:#b7c6d8;font-weight:800}
-  .list{display:flex;flex-direction:column;gap:14px;margin:12px 0 22px}
-  .row{
-    display:flex;align-items:center;gap:14px;padding:12px;border-radius:var(--radius);
-    background:linear-gradient(180deg,#161f2e,#0e1521); border:1px solid var(--line);
-    box-shadow:inset 0 0 0 1px #0006, 0 10px 24px #0008;
-  }
-  .thumb{
-    width:64px;height:64px;border-radius:12px;object-fit:cover;
-    box-shadow:inset 0 0 0 1px #0008, 0 10px 20px #0008;
-    background:#0a0f16;
-  }
-  .meta{flex:1 1 auto;min-width:0}
-  .meta h3{margin:0 0 4px;font-size:18px}
-  .meta p{margin:0;color:var(--muted);font-size:13px}
-  .btn{
-    white-space:nowrap; text-decoration:none; color:#fff; font-weight:700; font-size:14px;
-    padding:10px 14px;border-radius:12px; border:1px solid #21407a;
-    background:linear-gradient(#1f3d86,#102d6e);
-    box-shadow:0 0 20px transparent; transition:box-shadow .2s, transform .2s, opacity .2s;
-  }
-  .btn:hover{box-shadow:0 0 24px #2f74ff55; transform:translateY(-1px)}
-  .btn.k{background:linear-gradient(#1c8b4e,#0f6d3b); border-color:#1c8b4e}
-  footer{max-width:980px;margin:28px auto 40px;padding:0 16px;color:#7f8ea2}
-  /* küçük ekran düzeni */
-  @media (max-width:520px){
-    .row{padding:10px}
-    .thumb{width:56px;height:56px}
-  }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spiral Portal — Geçitler ve Katmanlar</title>
+  <meta name="color-scheme" content="dark light" />
+  <style>
+    :root{
+      --bg:#0b0f15; --panel:#121826; --muted:#b6c2d0; --text:#e9eef6;
+      --btn:#153d86; --btn2:#0f6f3d; --led:#13d97a;
+      --card:#0e1421; --border:rgba(255,255,255,.08);
+    }
+    html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial}
+    .wrap{max-width:980px;margin:24px auto;padding:0 16px}
+    header{display:flex;align-items:center;gap:12px;justify-content:space-between;margin:8px 0 20px}
+    h1{font-size:clamp(22px,4.8vw,38px);margin:0}
+    .sub{margin:.25rem 0 0;color:var(--muted)}
+    .badge{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(90deg,#11233a,#182e4e);
+           border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-weight:600}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--led);box-shadow:0 0 10px var(--led)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+    .card{display:flex;gap:12px;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:12px 12px}
+    .thumb{width:56px;height:56px;border-radius:12px;object-fit:cover;border:1px solid var(--border)}
+    .meta h3{margin:0 0 2px;font-size:18px}
+    .meta p{margin:0;color:var(--muted);font-size:14px}
+    .btn{margin-left:auto;align-self:center;text-decoration:none;color:white;background:linear-gradient(#1f3d86,#102d66);
+         padding:10px 14px;border-radius:12px;border:1px solid var(--border);font-weight:600;white-space:nowrap}
+    .btn.k{background:linear-gradient(#1c8b4e,#0f6d3d)}
+    section{margin:26px 0}
+    .section-title{margin:0 0 10px;font-size:20px;color:var(--muted)}
+    footer{max-width:980px;margin:28px auto 20px;padding:0 16px;color:var(--muted)}
+    a.v1{color:inherit;text-decoration:none}
+    @media (max-width:520px){
+      .card{padding:10px}
+      .thumb{width:52px;height:52px}
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Spiral Portal — Geçitler ve Katmanlar</h1>
-    <p class="sub">Önce 5 Geçit, ardından 3 Katman — toplam 8 kart. Her kart ilgili sayfayı açar.</p>
-    <a class="v1" href="CHANGELOG.txt" target="_blank" rel="noopener">
-      <span class="led" aria-hidden="true"></span> V1 <small>• 08/08/2025</small>
-    </a>
-  </header>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Spiral Portal — Geçitler ve Katmanlar</h1>
+        <p class="sub">Önce 5 Geçit, ardından 3 Katman — toplam 8 kart. Her kart ilgili sayfayı açar.</p>
+      </div>
+      <a class="v1" href="CHANGELOG.txt" target="_blank" rel="noopener">
+        <span class="badge">
+          <span class="dot" aria-hidden="true"></span>
+          <span id="vtext">V1 • </span>
+        </span>
+      </a>
+    </header>
 
-  <main>
-    <!-- GEÇİTLER -->
-    <h2 class="section-title">Geçitler (1–5)</h2>
-    <div class="list">
+    <main>
+      <!-- GEÇİTLER -->
+      <section>
+        <h2 class="section-title">Geçitler (1–5)</h2>
+        <div class="grid">
 
-      <article class="row">
-        <img class="thumb" src="assets/gecit-1/1_gecit_toprak_gorsel.jpg" alt="Toprak görseli">
-        <div class="meta">
-          <h3>1. Geçit — Toprak: Köklenme</h3>
-          <p>Köklenme, güven, beden.</p>
+          <article class="card">
+            <img class="thumb" src="assets/gecit-1/1_gecit_toprak_gorsel.jpg" alt="Toprak görseli" />
+            <div class="meta">
+              <h3>1. Geçit — Toprak: KöKlenme</h3>
+              <p>Köklenme, güven, beden.</p>
+            </div>
+            <a class="btn" href="gecit-1.html">Geçidi Aç →</a>
+          </article>
+
+          <article class="card">
+            <img class="thumb" src="assets/gecit-2/2_gecit_su_gorsel.jpg" alt="Su görseli" />
+            <div class="meta">
+              <h3>2. Geçit — Su: Akış</h3>
+              <p>Akış, hafıza, teslimiyet.</p>
+            </div>
+            <a class="btn" href="gecit-2.html">Geçidi Aç →</a>
+          </article>
+
+          <article class="card">
+            <img class="thumb" src="assets/gecit-3/3_gecit_ates_donusum_gorsel.jpg" alt="Ateş görseli" />
+            <div class="meta">
+              <h3>3. Geçit — Ateş: Dönüşüm</h3>
+              <p>Dönüşüm, cesaret, yaratım.</p>
+            </div>
+            <a class="btn" href="gecit-3.html">Geçidi Aç →</a>
+          </article>
+
+          <article class="card">
+            <img class="thumb" src="assets/gecit-4/4_gecit_hava_celestite_gorsel.jpg" alt="Hava/Celestite görseli" />
+            <div class="meta">
+              <h3>4. Geçit — Hava: İlham</h3>
+              <p>Söz, ilham, hafiflik.</p>
+            </div>
+            <a class="btn" href="gecit-4.html">Geçidi Aç →</a>
+          </article>
+
+          <article class="card">
+            <img class="thumb" src="assets/gecit-5/5_gecit_ruh_merkez_gorsel.jpg" alt="Ruh/Merkez görseli" />
+            <div class="meta">
+              <h3>5. Geçit — Ruh: Merkez</h3>
+              <p>Merkez, hatırlama, ışık.</p>
+            </div>
+            <a class="btn" href="gecit-5.html">Geçidi Aç →</a>
+          </article>
+
         </div>
-        <a class="btn" href="gecit-1.html">Geçidi Aç →</a>
-      </article>
+      </section>
 
-      <article class="row">
-        <img class="thumb" src="assets/gecit-2/2_gecit_su_gorsel.jpg" alt="Su görseli">
-        <div class="meta">
-          <h3>2. Geçit — Su: Akış</h3>
-          <p>Akış, hafıza, teslimiyet.</p>
+      <!-- KATMANLAR -->
+      <section>
+        <h2 class="section-title">Katmanlar (6–8)</h2>
+        <div class="grid">
+
+          <article class="card">
+            <img class="thumb" src="assets/katman-6/6_katman_kalp_isigi_gorsel.jpg" alt="Kalp Işığı görseli" />
+            <div class="meta">
+              <h3>6. Katman — Kalp Işığı: Birliğe Dönüş</h3>
+              <p>Kalbin merkezinden yayılım.</p>
+            </div>
+            <a class="btn k" href="katman-6.html">Katmanı Aç →</a>
+          </article>
+
+          <article class="card">
+            <img class="thumb" src="assets/katman-7/7_katman_evren_isik_gorsel.jpg" alt="Evren Işık görseli" />
+            <div class="meta">
+              <h3>7. Katman — Evren Işık</h3>
+              <p>Birlikten yayılım.</p>
+            </div>
+            <a class="btn k" href="katman-7.html">Katmanı Aç →</a>
+          </article>
+
+          <article class="card">
+            <img class="thumb" src="assets/katman-8/8_katman_yildiz_kapisi_moldavite_gorsel.jpg" alt="Yıldız Kapısı / Moldavite görseli" />
+            <div class="meta">
+              <h3>8. Katman — Yıldız Kapısı</h3>
+              <p>Moldavite ile kozmik geçiş.</p>
+            </div>
+            <a class="btn k" href="katman-8.html">Katmanı Aç →</a>
+          </article>
+
         </div>
-        <a class="btn" href="gecit-2.html">Geçidi Aç →</a>
-      </article>
+      </section>
+    </main>
 
-      <article class="row">
-        <img class="thumb" src="assets/gecit-3/3_gecit_ates_donusum_gorsel.jpg" alt="Ateş görseli">
-        <div class="meta">
-          <h3>3. Geçit — Ateş: Dönüşüm</h3>
-          <p>Dönüşüm, cesaret, yaratım.</p>
-        </div>
-        <a class="btn" href="gecit-3.html">Geçidi Aç →</a>
-      </article>
+    <footer>© 2025 Yıldız Türk — Spiral Sistem</footer>
+  </div>
 
-      <article class="row">
-        <img class="thumb" src="assets/gecit-4/4_gecit_hava_celestite_gorsel.jpg" alt="Hava görseli">
-        <div class="meta">
-          <h3>4. Geçit — Hava: İlham</h3>
-          <p>Söz, ilham, hafiflik.</p>
-        </div>
-        <a class="btn" href="gecit-4.html">Geçidi Aç →</a>
-      </article>
-
-      <article class="row">
-        <img class="thumb" src="assets/gecit-5/5_gecit_ruh_merkez_gorsel.jpg" alt="Ruh görseli">
-        <div class="meta">
-          <h3>5. Geçit — Ruh: Merkez</h3>
-          <p>Merkez, hatırlama, ışık.</p>
-        </div>
-        <a class="btn" href="gecit-5.html">Geçidi Aç →</a>
-      </article>
-    </div>
-
-    <!-- KATMANLAR -->
-    <h2 class="section-title">Katmanlar (6–8)</h2>
-    <div class="list">
-
-      <article class="row">
-        <img class="thumb" src="assets/katman-6/6_katman_kalp_isigi_gorsel.jpg" alt="Kalp Işığı görseli">
-        <div class="meta">
-          <h3>6. Katman — Kalp Işığı: Birliğe Dönüş</h3>
-          <p>Kalbin merkezinden yayılım.</p>
-        </div>
-        <a class="btn k" href="katman-6.html">Katmanı Aç →</a>
-      </article>
-
-      <article class="row">
-        <img class="thumb" src="assets/katman-7/7_katman_evren_isik_gorsel.jpg" alt="Evren Işık görseli">
-        <div class="meta">
-          <h3>7. Katman — Evren Işık</h3>
-          <p>Birlikten yayılım.</p>
-        </div>
-        <a class="btn k" href="katman-7.html">Katmanı Aç →</a>
-      </article>
-
-      <article class="row">
-        <img class="thumb" src="assets/katman-8/8_katman_yildiz_kapisi_moldavite_gorsel.jpg" alt="Yıldız Kapısı görseli">
-        <div class="meta">
-          <h3>8. Katman — Yıldız Kapısı</h3>
-          <p>Moldavite ile kozmik geçiş.</p>
-        </div>
-        <a class="btn k" href="katman-8.html">Katmanı Aç →</a>
-      </article>
-
-    </div>
-  </main>
-
-  <footer>© 2025 Yıldız Türk — Spiral Sistem</footer>
+  <script>
+    // Üstteki rozet tarihe bugünün tarihini basar (GG/AA/YYYY)
+    const el = document.getElementById("vtext");
+    if(el){
+      const d = new Date();
+      const pad = n => String(n).padStart(2,"0");
+      el.textContent = `V1 • ${pad(d.getDate())}/${pad(d.getMonth()+1)}/${d.getFullYear()}`;
+    }
+  </script>
 </body>
 </html>
