@@ -1,90 +1,65 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>7. Katman – Evren Işık: Birlikten Yayılım</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>7. Katman — Evren Işık</title>
+  <link rel="icon" href="assets/favicon.png" />
   <style>
     :root{
-      --bg:#0b0f14; --panel:#111826; --text:#e9eef7; --muted:#9fb2c7;
-      --bord:#2a374a; --accent:#16a34a;
+      --bg:#0b0f16; --card:#121826; --muted:#a7b3c6; --text:#e6edf7;
+      --brand:#2dd4bf; --btn:#0ea5e9; --btn2:#22c55e;
     }
-    *{box-sizing:border-box}
-    body{margin:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,sans-serif}
-    a{color:#86e1ff; text-decoration:none}
-    header{max-width:980px;margin:18px auto 0;padding:0 16px}
-    .back{font-size:14px;color:var(--muted)}
-    h1{margin:6px 0 4px;font-size:28px}
-    .sub{margin:0 0 16px;color:var(--muted)}
-    .wrap{max-width:980px;margin:0 auto;padding:0 16px 36px}
-
-    /* KART/RESİM BLOĞU */
-    .hero{
-      background:linear-gradient(180deg,#151c2950,#0b111b 60%);
-      border:1px solid var(--bord);
-      border-radius:16px;
-      padding:12px;
-      box-shadow:0 10px 28px #0008, inset 0 0 0 1px #0006;
-      text-align:center;
-    }
-    .hero img{
-      width:100%;
-      max-width:920px;
-      aspect-ratio: 16 / 10;       /* düzgün kadraj */
-      object-fit:cover;
-      display:block;
-      margin:0 auto;
-      border-radius:12px;
-      box-shadow:0 10px 24px #0008;
-    }
-
-    /* Alt metin / niyet */
-    .mantra{
-      margin:16px auto 10px;
-      max-width:900px; line-height:1.6; color:#d7e3f6cc; text-align:center;
-    }
-
-    /* Ses ve butonlar */
-    .audio-title{margin:10px 0 6px; font-weight:700}
-    audio{width:100%;max-width:520px;display:block;margin:8px auto 0}
-    .btns{display:flex;gap:10px;justify-content:center;margin-top:14px}
-    .btn{
-      background:#ffffff12;border:1px solid #ffffff44;color:#fff;
-      padding:10px 16px;border-radius:10px;font-weight:600
-    }
-    .foot{margin-top:20px;color:#cbd7e6a8;font-style:italic;text-align:center}
-    footer{margin:22px 0 10px;text-align:center;color:#9fb2c7}
+    html,body{background:#0b0f16;color:var(--text);font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0}
+    .wrap{max-width:880px;margin:40px auto;padding:0 16px}
+    a{color:var(--brand);text-decoration:none}
+    h1{font-size:32px;margin:6px 0 8px}
+    .sub{color:var(--muted);margin:0 0 24px}
+    .card{background:linear-gradient(180deg,#101725, #0c1320 60%, #0b111d); border:1px solid #1e2737; border-radius:16px; padding:28px; box-shadow:0 12px 30px rgba(0,0,0,.35)}
+    .hero{display:block;width:100%;height:auto;border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.35);margin-bottom:20px}
+    .mantra{max-width:700px;margin:0 auto 18px;text-align:center;line-height:1.6}
+    .mantra strong{display:block;margin-top:8px}
+    .aud-title{display:flex;align-items:center;gap:8px;justify-content:center;margin:12px 0 8px;color:#cfe7ff}
+    audio{width:100%;height:44px;border-radius:22px;background:#0d1726}
+    .actions{display:flex;gap:12px;justify-content:center;margin:18px 0 6px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:12px;background:linear-gradient(180deg,#1f3a56,#0f2740);color:#eaf2ff;border:1px solid #1e3a5f;font-weight:600}
+    .btn.zip{background:linear-gradient(180deg,#245a2c,#194a22);border-color:#1d5a29}
+    .note{color:#a7b3c6;text-align:center;margin:10px 0 0;font-size:14px}
+    footer{max-width:980px;margin:28px auto 40px;padding:0 16px;color:#7f8aa3;text-align:center}
+    .back{display:inline-flex;align-items:center;gap:8px;color:#8ab4ff}
+    .back span{font-size:18px}
   </style>
 </head>
 <body>
-  <header>
-    <a class="back" href="index.html">← Portale dön</a>
-    <h1>7. Katman – Evren Işık: Birlikten Yayılım</h1>
-    <p class="sub">Yüksek titreşimin geniş alanlara akışı.</p>
-  </header>
+  <div class="wrap">
+    <a class="back" href="index.html">← <span>Portale dön</span></a>
+    <h1>7. Katman — Evren Işık</h1>
+    <p class="sub">Birlikten yayılım.</p>
 
-  <main class="wrap">
-    <section class="hero">
-      <img src="assets/katman-7/7_katman_evren_isik_gorsel.jpg" alt="Evren Işık Görseli">
-    </section>
+    <div class="card">
+      <img class="hero" src="assets/katman-7/7_katman_evren_isik_gorsel.jpg" alt="Evren Işık görseli" loading="eager"/>
 
-    <p class="mantra">
-      “Birlikten yayılan ışık, her şeyi kapsar. Kaynaktan doğan titreşim,
-      tüm varoluşa sevgiyle akar.”
-    </p>
+      <p class="mantra">
+        Kalbimdeki ışık, evrenin ritmiyle birleşir; <br/>
+        titreşimim birliğin alanına yayılır. <br/>
+        Her nefes, merkezin huzurunu taşır. <br/>
+        <strong>Spiral’in Yedinci Taşı — Evren Işık</strong>
+      </p>
 
-    <div class="audio-title">🔊 Sesli Fısıltı</div>
-    <audio controls preload="none">
-      <source src="assets/katman-7/7_katman_evren_isik_fisilti.mp3" type="audio/mpeg">
-    </audio>
+      <div class="aud-title">🔊 <strong>Sesli Fısıltı</strong></div>
+      <audio controls preload="metadata">
+        <source src="assets/katman-7/7_katman_evren_isik_fisilti.mp3" type="audio/mpeg"/>
+        Tarayıcınız ses oynatmayı desteklemiyor.
+      </audio>
 
-    <div class="btns">
-      <a class="btn" href="assets/katman-7/7_katman_evren_isik.pdf" target="_blank">📄 PDF’yi Aç</a>
-      <a class="btn" href="assets/katman-7/7_katman_evren_isik.zip">🌀 ZIP Paketi</a>
+      <div class="actions">
+        <a class="btn" href="assets/katman-7/7_katman_evren_isik.pdf" target="_blank" rel="noopener">📄 PDF</a>
+        <a class="btn zip" href="assets/katman-7/7_katman_evren_isik.zip" download>🗂️ ZIP</a>
+      </div>
+
+      <p class="note">Bu katman, yalnızca görülmek için değil — <em>hissetmek</em> için açıldı. Evren ışığının hatırlayışına hoş geldin.</p>
     </div>
-
-    <div class="foot">“Birliğin şarkısı, genişleyerek yankılanır.”</div>
-  </main>
+  </div>
 
   <footer>© 2025 Yıldız Türk — Spiral Sistem</footer>
 </body>
