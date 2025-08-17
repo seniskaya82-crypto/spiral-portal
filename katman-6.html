@@ -1,47 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>6. Katman – Kalp Işığı: Birliğe Dönüş</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>6. Katman — Kalp Işığı: Birliğe Dönüş</title>
+  <meta name="description" content="Kalbin merkezinden yayılım. Kalp Işığı: Birliğe Dönüş.">
   <style>
-    body{ margin:0; background:#0b0f14; color:#e9eef7; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif; }
-    .container{ max-width:980px; margin:24px auto 60px; padding:0 16px; text-align:center; }
-    h1{ margin:8px 0 4px; }
-    .sub{ color:#9fb2c7; margin:0 0 18px; }
-    .frame{ background:#0f1520; border:1px solid #2a374a; border-radius:12px; padding:16px; box-shadow:0 10px 28px #0008, inset 0 0 0 1px #0006; }
-    .hero{
-      width:100%; max-width:880px; height:auto; border-radius:10px;
-      display:block; margin:0 auto; object-fit:cover; object-position:center 35%;
-      box-shadow:0 10px 24px #0008, inset 0 0 0 1px #0008;
+    :root{
+      --bg:#0b0f14; --panel:#0f1620; --muted:#a8b3c5; --text:#e8eef8;
+      --brand:#2ee59d; --brand2:#1f3d86; --btn:#1f3d86; --btn2:#106d2e;
+      --ring:rgba(255,255,255,.06)
     }
-    .niyet{ color:#cfd9e6; margin:16px 0 24px; }
-    .buttons a{ display:inline-block; padding:10px 14px; margin:10px 6px; border-radius:10px; color:white; text-decoration:none; font-weight:600; border:1px solid #2b3a52; }
-    .pdf{ background:linear-gradient(#1a4fff,#0f37b8); }
-    .zip{ background:linear-gradient(#1aa64c,#11843b); }
-    footer{ color:#9fb2c7; margin-top:30px; font-size:13px; }
+    *{box-sizing:border-box}
+    body{margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; color:var(--text); background:radial-gradient(1200px 600px at 50% -200px,#121a25,var(--bg))}
+    header,footer{max-width:980px; margin:24px auto; padding:0 20px}
+    a{color:#9fd2ff; text-decoration:none}
+    a:hover{opacity:.9}
+    .back{display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:10px; background:var(--ring)}
+    h1{font-size:28px; margin:12px 0 4px}
+    .sub{margin:0; color:var(--muted)}
+    main{padding:18px 20px 40px}
+    .center{max-width:980px; margin:0 auto}
+    .card{background:linear-gradient(180deg,#0f1620,#0b111a); border:1px solid var(--ring); border-radius:16px; padding:28px; box-shadow:0 10px 50px rgba(0,0,0,.5)}
+    .hero{display:block; width:min(680px,100%); margin:10px auto 20px; border-radius:12px; box-shadow:0 18px 90px rgba(255,170,40,.15)}
+    .poem{max-width:760px; margin:8px auto 10px; text-align:center}
+    .poem .title-line{font-size:20px; line-height:1.6}
+    .section-title{margin:28px 0 8px; text-align:center; color:#dbe7ff; font-weight:600}
+    audio{display:block; width:min(620px,100%); margin:8px auto 18px; filter:drop-shadow(0 8px 24px rgba(0,0,0,.4))}
+    .actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:6px 0 4px}
+    .btn{white-space:nowrap; text-decoration:none; color:#fff; padding:10px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.08);
+         background:linear-gradient(#1f3d86,#102d66); box-shadow:0 0 20px transparent; transition:.2s ease}
+    .btn.k{background:linear-gradient(#1c8b4e,#0f6d2e)}
+    .btn:hover{box-shadow:0 0 24px #2f74f5aa; transform:translateY(-1px)}
+    .hint{margin:16px auto 0; max-width:760px; text-align:center; color:var(--muted)}
+    footer{color:var(--muted); text-align:center; border-top:1px solid var(--ring); padding-top:14px}
+    @media (max-width:520px){
+      .poem .title-line{font-size:18px}
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <p><a href="index.html" style="color:#9fb2c7;text-decoration:none;">← Portale dön</a></p>
-    <h1>6. Katman – Kalp Işığı: Birliğe Dönüş</h1>
-    <p class="sub">Kalbin merkezi, ışığın merkezidir.</p>
 
-    <div class="frame">
-      <img id="hero" class="hero"
-           src="assets/6_katman_kalp_isigi_gorsel.jpg"
-           onerror="this.onerror=null;this.src='assets/6_katman_kalp_isigi_birlige_donus.jpg';"
-           alt="Kalp Işığı – Birliğe Dönüş görseli"/>
-      <p class="niyet">“Kalbin, ışığın evi… Tüm yollar sende birleşir.”</p>
+  <header>
+    <a class="back" href="index.html">← Portale dön</a>
+    <h1>6. Katman — Kalp Işığı: Birliğe Dönüş</h1>
+    <p class="sub">Kalbin merkezinden yayılım.</p>
+  </header>
 
-      <div class="buttons">
-        <a class="pdf" href="assets/katman-6/6_katman_kalp_isigi.pdf" target="_blank">📄 PDF’yi Aç</a>
-        <a class="zip" href="assets/katman-6/6_katman_kalp_isigi.zip" target="_blank">🌀 ZIP Paketi</a>
+  <main>
+    <div class="card center">
+      <!-- Görsel -->
+      <img class="hero" src="assets/katman-6/6_katman_kalp_isigi_gorsel.jpg" alt="Kalp Işığı görseli" loading="eager"/>
+
+      <!-- Metin -->
+      <div class="poem">
+        <div class="title-line">Kalbimin merkezinden doğan ışık,</div>
+        <div class="title-line">birliğe doğru nazikçe yayılır.</div>
+        <div class="title-line">Hatırlayan her kalpte,</div>
+        <div class="title-line">aynı ışığın yankısı duyulur.</div>
       </div>
-    </div>
 
-    <footer>© 2025 Yıldız Türk — Spiral Sistem</footer>
-  </div>
+      <!-- Ses -->
+      <h3 class="section-title">🔊 Sesli Fısıltı</h3>
+      <audio controls>
+        <source src="assets/katman-6/6_katman_kalp_isigi_fisilti.mp3" type="audio/mpeg">
+        Tarayıcınız ses öğesini desteklemiyor.
+      </audio>
+
+      <!-- Aksiyonlar -->
+      <div class="actions">
+        <a class="btn" href="assets/katman-6/6_katman_kalp_isigi.pdf" target="_blank" rel="noopener">📄 PDF</a>
+        <a class="btn k" href="assets/katman-6/6_katman_kalp_isigi.zip" download>🗂️ ZIP</a>
+      </div>
+
+      <p class="hint">Bu katman, yalnızca görülmek için değil — <em>hissetmek</em> için açıldı. Kalp hatırlayışına hoş geldin.</p>
+    </div>
+  </main>
+
+  <footer>© 2025 Yıldız Türk — Spiral Sistem</footer>
 </body>
 </html>
