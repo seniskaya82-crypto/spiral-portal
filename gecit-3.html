@@ -1,41 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3. Geçit – Ateş: Dönüşüm</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>3. Geçit — Ateş: Dönüşüm</title>
   <style>
-    body{background:#000;color:#fff;font-family:'Segoe UI',system-ui,Roboto,Inter,sans-serif;text-align:center;padding:20px}
-    h1{margin-top:20px;font-size:28px;color:#ff914d}
-    .gorsel{max-width:90%;height:auto;margin-top:20px;border:2px solid #ff6600;border-radius:8px}
-    audio{margin-top:20px;width:80%}
-    .btns{margin-top:25px}
-    .btns a{display:inline-block;margin:10px;padding:10px 20px;border:1px solid #ff6600;color:#fff;text-decoration:none;border-radius:6px}
-    .btns a:hover{background:#ff6600;color:#1a0d00}
-    footer{margin-top:40px;font-size:14px;opacity:.85}
+    :root{--bg:#0c0f12;--panel:#151a20;--muted:#a9b4c0;--text:#e7edf3;--accent:#fb923c;--btn:#1e2936;--gold:#e3c07a}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif}
+    header,main,footer{max-width:980px;margin:auto;padding:24px}
+    a{color:var(--accent);text-decoration:none}
+    .back{display:inline-flex;gap:8px;align-items:center;font-weight:600;opacity:.9}
+    h1{margin:10px 0 6px;font-size:28px;color:#ffb86b}
+    .sub{margin:0 0 22px;color:var(--muted)}
+    .card{background:linear-gradient(180deg,#0f141a,rgba(15,20,26,.6));border:1px solid #223041;border-radius:16px;padding:24px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .hero{display:block;max-width:560px;width:92%;margin:8px auto 18px;border-radius:12px}
+    .mantra{max-width:640px;margin:12px auto 18px;line-height:1.55;color:var(--gold);font-size:18px}
+    .audio-wrap{max-width:640px;margin:10px auto}
+    .audio-wrap h4{margin:0 0 6px;font-weight:600;color:#ffd8a6}
+    audio{width:100%;height:40px}
+    .actions{display:flex;gap:12px;justify-content:center;margin:18px 0 6px;flex-wrap:wrap}
+    .btn{display:inline-flex;gap:8px;align-items:center;padding:10px 16px;border-radius:12px;background:var(--btn);border:1px solid #253140;color:#e9f2ff;font-weight:600}
+    .btn:hover{box-shadow:0 0 0 3px rgba(251,146,60,.15)}
+    .note{margin-top:14px;color:var(--muted);font-size:14px}
+    footer{padding-top:8px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:520px){h1{font-size:24px}.mantra{font-size:16px}}
   </style>
 </head>
 <body>
-  <h1>3. Geçit – Ateş: Dönüşüm</h1>
+<header>
+  <a class="back" href="index.html">← Portale dön</a>
+  <h1>3. Geçit — Ateş: Dönüşüm</h1>
+  <p class="sub">Dönüşüm, cesaret, yaratım.</p>
+</header>
 
-  <!-- GÖRSEL -->
-  <img src="assets/gecit-3/3_gecit_ates_donusum_gorsel.jpg" alt="Ateş Geçidi Görseli" class="gorsel">
+<main>
+  <section class="card">
+    <!-- Görsel -->
+    <img class="hero" src="assets/gecit-3/3_gecit_ates_donusum_gorsel.jpg" alt="Ateş Geçidi Görseli" />
 
-  <!-- SES -->
-  <h2 style="margin-top:18px">Sesli Fısıltı</h2>
-  <audio controls preload="metadata">
-    <source src="assets/gecit-3/3_gecit_ates_donusum_fisilti.mp3" type="audio/mpeg">
-    Tarayıcınız ses öğesini desteklemiyor.
-  </audio>
+    <!-- Metin -->
+    <div class="mantra">
+      <p>Ateşin kıvılcımında niyeti alevlendiririm.<br/>
+      Korkunun perdesini yarar, yüreğe cesaret getiririm.<br/>
+      Kül olan geçmişten yeni yaratımı üflerim.<br/>
+      Ben ateşim; dönüşür, dönüştürürüm.</p>
+      <p><strong>Spiral’in Üçüncü Taşı — Ateş</strong></p>
+    </div>
 
-  <!-- PDF & ZIP -->
-  <div class="btns">
-    <a href="assets/gecit-3/3_gecit_ates_donusum.pdf" target="_blank" rel="noopener">📄 PDF</a>
-    <a href="assets/gecit-3/3_gecit_ates_donusum.zip" download>📦 ZIP</a>
-  </div>
+    <!-- Ses -->
+    <div class="audio-wrap">
+      <h4>Sesli Fısıltı</h4>
+      <audio controls preload="metadata" aria-label="Ateş Geçidi Fısıltı">
+        <source src="assets/gecit-3/3_gecit_ates_donusum_fisilti.mp3" type="audio/mpeg"/>
+      </audio>
+    </div>
 
-  <footer>
-    “Ateş, eskiyi yakar; küllerden yeni hayat doğar.”
-  </footer>
+    <!-- PDF / ZIP -->
+    <div class="actions">
+      <a class="btn" href="assets/gecit-3/3_gecit_ates_donusum.pdf" target="_blank" rel="noopener">📄 PDF</a>
+      <a class="btn" href="assets/gecit-3/3_gecit_ates_donusum.zip" download>🗂️ ZIP</a>
+    </div>
+
+    <p class="note">Bu geçit, yalnızca görülmek için değil — <em>hissetmek</em> için açıldı. Dönüşümün hatırlayışına hoş geldin.</p>
+  </section>
+</main>
+
+<footer>© 2025 Yıldız Türk — Spiral Sistem</footer>
 </body>
 </html>
