@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://birlik-kapisi-portal.web.app/sitemap.xml
