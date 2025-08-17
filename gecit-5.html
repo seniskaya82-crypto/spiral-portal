@@ -1,72 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>5. Geçit – Ruh: Merkez</title>
-  <style>
-    :root{
-      --bg:#000; --ink:#fff; --edge:#ffffff30; --accent:#7ad7ff;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0; background:var(--bg); color:var(--ink);
-      font-family: "Segoe UI", system-ui, Roboto, Inter, sans-serif; text-align:center;
-      padding:22px 16px 36px;
-    }
-    h1{margin:8px 0 6px; font-size:clamp(22px,3.2vw,30px); color:#cfeaff}
-    .wrap{max-width:900px; margin:auto}
-    .hero{
-      margin:14px auto 8px; border-radius:10px; overflow:hidden;
-      display:inline-block; border:1px solid var(--edge);
-    }
-    .hero img{display:block; width:clamp(260px,86vw,860px); height:auto}
-    .niyet{
-      margin:18px auto 10px; color:#e0e0e0; line-height:1.6;
-      font-size:clamp(14px,2.3vw,18px);
-    }
-    .audio-title{margin-top:18px; font-weight:700; color:var(--accent)}
-    audio{width:clamp(260px,86vw,520px); margin-top:8px}
-    .btns{margin-top:18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
-    .btn{
-      color:#fff; text-decoration:none; padding:10px 16px; border-radius:8px;
-      border:1px solid var(--edge); background:#ffffff10; transition:.2s;
-      font-weight:600
-    }
-    .btn:hover{background:#ffffff25}
-    footer{margin-top:28px; color:#bbb; font-style:italic; font-size:14px}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5. Geçit — Ruh: Merkez</title>
+<link rel="preload" href="assets/gecit-5/5_gecit_ruh_merkez_gorsel.jpg" as="image">
+<style>
+:root{--bg:#0b0f14;--panel:#121822;--text:#e9edf3;--muted:#98a3b3;--accent:#2bd4a7;}
+*{box-sizing:border-box} body{margin:0;background:radial-gradient(1200px circle at 50% -200px,#161d27 0%,#0b0f14 55%);}
+.wrap{max-width:860px;margin:0 auto;padding:28px 16px 64px;color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none} a:hover{opacity:.9}
+h1{margin:6px 0 8px;font-size:clamp(22px,3.6vw,30px);color:#49e6bd}
+.sub{margin:0 0 22px;color:var(--muted);opacity:.9}
+.panel{background:linear-gradient(180deg,rgba(18,24,34,.85),rgba(18,24,34,.65));border:1px solid rgba(255,255,255,.06);border-radius:16px;box-shadow:0 6px 30px rgba(0,0,0,.35);backdrop-filter:blur(3px);padding:18px 16px;margin:0 auto;max-width:780px}
+.figure{display:flex;flex-direction:column;align-items:center;gap:14px;margin:12px auto 10px}
+.figure img{max-width:min(520px,86%);height:auto;border-radius:12px;display:block}
+.figure .qr{width:110px;height:auto;opacity:.92}
+.hr{width:56px;height:56px;border-radius:50%;margin:6px auto 10px;background:radial-gradient(circle,#ffd27a 0%, #f0b13a 50%, transparent 56%);opacity:.75}
+.mantra{font:600 17px/1.9 ui-serif,Georgia,Times,serif;color:#f3d9a4;text-align:center;letter-spacing:.2px;margin:10px auto 4px;padding:0 8px}
+.lead{margin:14px auto 22px;max-width:720px;text-align:center;color:#c6d0e0}
+.audio-wrap{display:flex;flex-direction:column;align-items:center;gap:8px;margin:8px auto 2px}
+audio{width:min(560px,92%);height:40px}
+.btns{display:flex;justify-content:center;gap:14px;margin:14px auto 4px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(#1a2330,#141b26);color:var(--text);font-weight:600}
+.btn:hover{box-shadow:0 0 0 3px rgba(43,212,167,.15)}
+.badge{display:inline-block;margin-top:14px;font-size:13px;color:var(--muted);text-align:center}
+footer{margin-top:36px;text-align:center;color:#9aa6b7;font-size:13px}
+@media (max-width:520px){.mantra{font-size:16px;line-height:1.8}}
+</style>
 </head>
 <body>
   <div class="wrap">
-    <h1>5. Geçit – Ruh: Merkez</h1>
+    <a href="index.html">← Portale dön</a>
+    <h1>5. Geçit — Ruh: Merkez</h1>
+    <p class="sub">Merkez, hatırlama, ışık — kalbinin tam ortasına hizalan.</p>
 
-    <!-- Görsel -->
-    <div class="hero">
-      <img src="assets/gecit-5/5_gecit_ruh_merkez_gorsel.jpg" alt="5. Geçit – Ruh: Merkez görseli">
+    <div class="panel">
+      <div class="figure">
+        <img src="assets/gecit-5/5_gecit_ruh_merkez_gorsel.jpg" alt="Ruh — Merkez görseli">
+      </div>
+
+      <div class="hr" aria-hidden="true"></div>
+
+      <div class="mantra">
+        Ben merkezdeyim; hatırlamanın ışığı içimde yanar.<br>
+        Sessizlikte genişler, kalbimin merkezinden yayılırım.
+      </div>
+
+      <p class="lead"><strong>Spiral’in Beşinci Taşı — Ruh</strong></p>
+
+      <div class="audio-wrap">
+        <div style="font-weight:700;opacity:.9">Sesli Fısıltı</div>
+        <audio controls preload="metadata">
+          <source src="assets/gecit-5/5_gecit_ruh_merkez_fisilti.mp3" type="audio/mpeg">
+          Tarayıcın ses öğesini desteklemiyor.
+        </audio>
+
+        <div class="btns">
+          <a class="btn" href="assets/gecit-5/5_gecit_ruh_merkez.pdf" target="_blank" rel="noopener">
+            📄 PDF
+          </a>
+          <a class="btn" href="assets/gecit-5/5_gecit_ruh_merkez.zip" download>
+            🗂️ ZIP
+          </a>
+        </div>
+
+        <div class="badge">
+          Bu geçit, yalnızca görülmek için değil — <em>hissetmek</em> için açıldı.
+          Merkezin hatırlayışına hoş geldin.
+        </div>
+      </div>
     </div>
 
-    <!-- Niyet -->
-    <p class="niyet">
-      “Bu geçit, içimde yankılanan kadim sesi duymak; <br/>
-      sessizliğin merkezinde özümü hatırlamak ve <br/>
-      birliğin ışığında kendimi yeniden doğurmak içindir.”
-    </p>
-
-    <!-- Ses -->
-    <div class="audio-title">🔊 Sesli Fısıltı</div>
-    <audio controls preload="metadata">
-      <source src="assets/gecit-5/5_gecit_ruh_merkez_fisilti.mp3" type="audio/mpeg">
-      Tarayıcınız ses öğesini desteklemiyor.
-    </audio>
-
-    <!-- PDF & ZIP -->
-    <div class="btns">
-      <a class="btn" href="assets/gecit-5/5_gecit_ruh_merkez.pdf" target="_blank" rel="noopener">📄 PDF</a>
-      <a class="btn" href="assets/gecit-5/5_gecit_ruh_merkez.zip" download>📦 ZIP</a>
-    </div>
-
-    <footer>“Bu kapı, merkeze dönüşün fısıltısıdır.”</footer>
+    <footer>© 2025 Yıldız Türk — Spiral Sistem</footer>
   </div>
 </body>
 </html>
