@@ -1,82 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>8. Katman — Yıldız Kapısı</title>
-  <link rel="icon" href="assets/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>8. Katman — Yıldız Kapısı: Moldavite</title>
   <style>
-    :root{
-      --bg:#0b0f14; --panel:#0f1520; --text:#e7e7ea; --muted:#a7b0bd;
-      --accent:#3ddc97; --btn:#1f3b57; --btn2:#245a2f; --shade:#0c1118;
-    }
-    html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto}
-    a{color:#8ab4ff;text-decoration:none}
-    header,main,footer{max-width:980px;margin:24px auto;padding:0 16px}
-    header a.back{display:inline-block;color:#9bb3ff;opacity:.9}
-    h1{font-size:32px;margin:8px 0 4px;color:#73ffb0}
-    .sub{margin:0 0 20px;color:var(--muted)}
-    .panel{background:linear-gradient(180deg,#0f1624, #0b0f14);border:1px solid #1b2332;border-radius:18px;
-           box-shadow:0 10px 40px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03); padding:24px}
-    .hero{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.45)}
-    .poem{max-width:640px;margin:18px auto 10px;text-align:center;font-size:18px}
-    .poem .lead{font-size:20px;margin-bottom:10px}
-    .section-title{display:flex;align-items:center;gap:8px;justify-content:center;margin:18px 0 8px}
-    .section-title .icon{filter:drop-shadow(0 0 10px rgba(61,220,151,.25))}
-    audio{width:100%;height:44px;border-radius:24px;background:#0e1420}
-    .btns{display:flex;gap:12px;justify-content:center;margin-top:16px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;
-         border:1px solid #233046;background:linear-gradient(180deg,#162132,#111826); color:#dfe7f3;
-         font-weight:600}
-    .btn.pdf{background:linear-gradient(180deg,#1c2a42,#0f1624)}
-    .btn.zip{background:linear-gradient(180deg,#204225,#15281a)}
-    .btn .dot{width:10px;height:10px;border-radius:50%;background:#ffd166;box-shadow:0 0 12px #ffd16688}
-    footer{color:var(--muted);text-align:center;margin:32px auto 40px}
-    @media (max-width:520px){ h1{font-size:26px} .poem{font-size:17px} .poem .lead{font-size:18px} }
+    body{margin:0;background:#0c0f16;color:#e8ecf1;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif}
+    .wrap{max-width:980px;margin:40px auto;padding:0 20px}
+    h1{font-size:28px;margin:0 0 6px}
+    h2{font-weight:400;opacity:.8;margin:0 0 24px}
+    .gorsel{display:block;width:100%;max-width:760px;margin:0 auto 24px;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,.35)}
+    .niyet{max-width:760px;margin:0 auto 18px;text-align:center;font-size:18px;opacity:.9}
+    .audio{display:block;max-width:760px;margin:16px auto 22px;width:100%}
+    .btns{display:flex;gap:12px;justify-content:center;margin:10px 0 28px}
+    .btn{padding:12px 18px;border-radius:10px;text-decoration:none;color:#fff;display:inline-block}
+    .pdf{background:#2b6cb0}
+    .zip{background:#2f855a}
+    .muhur{opacity:.7;text-align:center;font-size:14px;margin:8px 0 20px}
+    footer{opacity:.6;text-align:center;font-size:12px;padding:16px 0 30px}
   </style>
 </head>
 <body>
-  <header>
-    <a class="back" href="index.html">← Portale dön</a>
+  <div class="wrap">
+    <a href="index.html" style="opacity:.8;text-decoration:none">← Portale dön</a>
     <h1>8. Katman — Yıldız Kapısı</h1>
-    <p class="sub">Moldavite ile kozmik geçiş.</p>
-  </header>
+    <h2>Moldavite — Kozmik Taş, Dönüşüm ve Bağ</h2>
 
-  <main>
-    <div class="panel">
-      <img class="hero" src="assets/katman-8/8_katman_yildiz_kapisi_moldavite_gorsel.jpg" alt="Yıldız Kapısı görseli" />
+    <p class="niyet">“Yıldız Kapısı, sadece gökyüzüne değil — kendi sonsuzluğuna açılır.”</p>
 
-      <div class="poem">
-        <p class="lead">Kalbimin yıldızından bir kapı açılır.</p>
-        <p>Kozmik rezonansla titreşir; hatırlayışın ışığı içimden dışarı taşar.</p>
-        <p>İçimde gök, dışımda merkez olur — “Ben ve Bir” tek nefeste buluşur.</p>
-        <p><strong>Spiral’in Sekizinci Taşı — Yıldız Kapısı</strong></p>
-      </div>
+    <!-- Görsel -->
+    <img
+      src="assets/katman-8/8_katman_yildiz_kapisi_moldavite_gorsel.jpg"
+      alt="Yıldız Kapısı — Moldavite"
+      class="gorsel" />
 
-      <div class="section-title">
-        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="#3ddc97" aria-hidden="true"><path d="M12 3l2.39 4.84L20 9.27l-4 3.9L17 19l-5-2.6L7 19l1-5.83-4-3.9 5.61-1.43L12 3z"/></svg>
-        <div><strong>Sesli Fısıltı</strong></div>
-      </div>
+    <!-- Ses -->
+    <h3 style="text-align:center; margin: 6px 0 6px; opacity:.9">🔊 Sesli Fısıltı</h3>
+    <audio class="audio" controls>
+      <source src="assets/katman-8/8_katman_yildiz_kapisi_moldavite_fisilti.mp3" type="audio/mpeg" />
+      Tarayıcınız ses oynatmayı desteklemiyor.
+    </audio>
 
-      <audio controls preload="auto">
-        <source src="assets/katman-8/8_katman_yildiz_kapisi_fisilti.mp3" type="audio/mpeg" />
-      </audio>
-
-      <div class="btns">
-        <a class="btn pdf" href="assets/katman-8/8_katman_yildiz_kapisi.pdf" target="_blank" rel="noopener">
-          <span class="dot"></span>PDF
-        </a>
-        <a class="btn zip" href="assets/katman-8/8_katman_yildiz_kapisi.zip">
-          <span class="dot"></span>ZIP
-        </a>
-      </div>
-
-      <p class="sub" style="text-align:center;margin-top:14px">
-        Bu katman, yalnızca görülmek için değil — <em>hissetmek</em> için açıldı. Yıldız hatırlayışına hoş geldin.
-      </p>
+    <!-- Dosyalar -->
+    <div class="btns">
+      <a class="btn pdf" href="assets/katman-8/8_katman_yildiz_kapisi_moldavite.pdf" target="_blank">📄 PDF</a>
+      <a class="btn zip" href="assets/katman-8/8_katman_yildiz_kapisi_moldavite.zip" target="_blank">🗂️ ZIP</a>
     </div>
-  </main>
 
-  <footer>© 2025 Yıldız Türk — Spiral Sistem</footer>
+    <p class="muhur">✨ Bu katman açıldı: Yıldız Kapısı seninle parlıyor. ✨</p>
+    <footer>© 2025 Yıldız Türk — Spiral Sistem</footer>
+  </div>
 </body>
 </html>
